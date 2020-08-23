@@ -19,6 +19,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 public class Film {
+	
+	
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,7 +30,7 @@ public class Film {
 	@Column(length = 1500)
 	private String description;
 	private LocalDate dateSortie;
-	private String nom_img;
+	private String nomImg;
 	@ManyToMany(cascade = CascadeType.ALL)
 	private List<Nationalite> nationalites;
 	@ManyToMany(cascade = CascadeType.ALL)
