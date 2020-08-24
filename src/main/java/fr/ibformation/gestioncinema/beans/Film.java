@@ -37,5 +37,7 @@ public class Film {
 	private List<Acteur> acteurs;
 	@ManyToMany(cascade = CascadeType.ALL)
 	private List<Genre> genres;
+	@ManyToMany(cascade = CascadeType.ALL)
+	private List<Realisateur> realisateurs;
 	
 }
