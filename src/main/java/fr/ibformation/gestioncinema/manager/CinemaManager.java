@@ -1,5 +1,9 @@
 package fr.ibformation.gestioncinema.manager;
 
-public interface CinemaManager {
+import fr.ibformation.gestioncinema.beans.Cinema;
 
+public interface CinemaManager {
+	
+	Iterable<Cinema> findAll();
+	
 }

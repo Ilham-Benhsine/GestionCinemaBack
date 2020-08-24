@@ -5,5 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 import fr.ibformation.gestioncinema.beans.Cinema;
 
 public interface CinemaDao extends CrudRepository<Cinema, Integer>{
+	
+	public Iterable<Cinema> findAll();
 
 }
