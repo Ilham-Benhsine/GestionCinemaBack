@@ -6,4 +6,5 @@ import fr.ibformation.gestioncinema.beans.Seance;
 
 public interface SeanceDao extends CrudRepository<Seance, Integer>  {
 
+	public Iterable<Seance> findAll();
 }

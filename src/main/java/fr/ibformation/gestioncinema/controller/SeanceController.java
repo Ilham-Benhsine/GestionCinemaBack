@@ -6,21 +6,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.ibformation.gestioncinema.beans.Cinema;
-import fr.ibformation.gestioncinema.manager.CinemaManager;
+import fr.ibformation.gestioncinema.beans.Seance;
+import fr.ibformation.gestioncinema.manager.SeanceManager;
 
 @RestController
-@RequestMapping("/cinema")
-public class CinemaController {
+@RequestMapping("/seance")
+public class SeanceController {
 	
 	@Autowired
-	CinemaManager cinemaManager;
+	SeanceManager seanceManager;
 	
 	@CrossOrigin
 	@RequestMapping(method = RequestMethod.GET, path = ("/"))
-	public Iterable<Cinema> getCinema() {
-		return cinemaManager.findAll();
+	public Iterable<Seance> getSeance() {
+		return seanceManager.findAll();
 	}
-
 }
-
