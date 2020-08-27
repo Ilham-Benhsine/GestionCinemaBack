@@ -17,4 +17,9 @@ public class FilmManagerImpl implements FilmManager {
 		return filmDao.findAll();
 	}
 
+	@Override
+	public Film save(Film film) {
+		return filmDao.save(film);
+	}
+
 }

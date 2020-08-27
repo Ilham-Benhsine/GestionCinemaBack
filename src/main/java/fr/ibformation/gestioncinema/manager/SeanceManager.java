@@ -6,4 +6,6 @@ public interface SeanceManager {
 
 	Iterable<Seance> findAll();
 
+	Seance save(Seance seance);
+
 }

@@ -13,21 +13,25 @@ import fr.ibformation.gestioncinema.manager.UtilisateurManager;
 @RestController
 @RequestMapping("/utilisateur")
 public class UtilisateurController {
-	
+
 	@Autowired
 	UtilisateurManager utilisateurManager;
-	
+
 	@CrossOrigin
 	@RequestMapping(method = RequestMethod.POST, path = ("/inscription/"))
 	public Utilisateur saveUtilisateur(@RequestBody Utilisateur util) {
-		return utilisateurManager.save(util);
+		if (utilisateurManager.checkIfPseudoAvailable(util)) {
+			return utilisateurManager.save(util);
+		} else {
+			return new Utilisateur();
+		}
 	}
-	
+
 	@CrossOrigin
 	@RequestMapping(method = RequestMethod.POST, path = ("/connexion/"))
 	public Utilisateur selectUtilisateur(@RequestBody Utilisateur util) {
 		util = utilisateurManager.checkIfExist(util);
-		if (util != null) {			
+		if (util != null) {
 			return util;
 		} else {
 			return new Utilisateur();

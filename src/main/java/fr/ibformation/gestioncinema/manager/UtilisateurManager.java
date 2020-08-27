@@ -10,4 +10,6 @@ public interface UtilisateurManager {
 
 	Utilisateur findByPseudo(String pseudo);
 
+	boolean checkIfPseudoAvailable(Utilisateur util);
+
 }

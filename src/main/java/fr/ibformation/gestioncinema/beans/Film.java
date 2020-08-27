@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,7 +19,6 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Film {
 	
-	
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,13 +29,13 @@ public class Film {
 	private String description;
 	private LocalDate dateSortie;
 	private String nomImg;
-	@ManyToMany(cascade = CascadeType.ALL)
+	@ManyToMany
 	private List<Nationalite> nationalites;
-	@ManyToMany(cascade = CascadeType.ALL)
+	@ManyToMany
 	private List<Acteur> acteurs;
-	@ManyToMany(cascade = CascadeType.ALL)
+	@ManyToMany
 	private List<Genre> genres;
-	@ManyToMany(cascade = CascadeType.ALL)
+	@ManyToMany
 	private List<Realisateur> realisateurs;
 	
 }

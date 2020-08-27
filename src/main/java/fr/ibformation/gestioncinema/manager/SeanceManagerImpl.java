@@ -42,4 +42,9 @@ public class SeanceManagerImpl implements SeanceManager {
 		return listeSeances;
 	}
 
+	@Override
+	public Seance save(Seance seance) {
+		return seanceDao.save(seance);
+	}
+
 }

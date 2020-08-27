@@ -6,4 +6,6 @@ public interface FilmManager {
 
 	Iterable<Film> findAll();
 
+	Film save(Film film);
+
 }

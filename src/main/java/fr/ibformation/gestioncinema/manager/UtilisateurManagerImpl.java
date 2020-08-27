@@ -32,4 +32,14 @@ public class UtilisateurManagerImpl implements UtilisateurManager {
 		return utilisateurDao.findByPseudo(pseudo);
 	}
 
+	@Override
+	public boolean checkIfPseudoAvailable(Utilisateur util) {
+		util = utilisateurDao.findByPseudo(util.getPseudo());
+		if (util != null) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+
 }

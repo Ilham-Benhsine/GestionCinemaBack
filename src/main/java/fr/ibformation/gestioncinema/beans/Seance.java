@@ -29,8 +29,6 @@ public class Seance {
 	private int placesSansReservation;
 	@ManyToMany(cascade = CascadeType.ALL)
 	private List<Utilisateur> utilisateurs;
-	public int getPlacesVendues() {
-		return placesSansReservation + utilisateurs.size();
-	}
+
 
 }
