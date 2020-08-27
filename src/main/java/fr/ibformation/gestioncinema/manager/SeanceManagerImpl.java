@@ -17,4 +17,9 @@ public class SeanceManagerImpl implements SeanceManager {
 		return seanceDao.findAll();
 	}
 
+	@Override
+	public Seance save(Seance seance) {
+		return seanceDao.save(seance);
+	}
+
 }
