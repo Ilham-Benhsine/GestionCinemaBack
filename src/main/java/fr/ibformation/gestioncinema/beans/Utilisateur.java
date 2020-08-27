@@ -20,6 +20,10 @@ public class Utilisateur {
 	private int id;
 	// TODO pseudo unique
 	private String pseudo;
+	public int getId() {
+		return id;
+	}
+	
 	private String password;
 	private String prenom;
 	private String nom;

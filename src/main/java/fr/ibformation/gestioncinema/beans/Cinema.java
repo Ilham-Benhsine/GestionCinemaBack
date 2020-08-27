@@ -26,6 +26,10 @@ public class Cinema {
 	private int nombreSalles;
 	private float prixHT;
 	private float sup3D;
+	public int getId() {
+		return id;
+	}
+
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_cinema")
 	private List<Salle> salles;

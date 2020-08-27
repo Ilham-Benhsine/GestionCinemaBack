@@ -1,5 +1,7 @@
 package fr.ibformation.gestioncinema.manager;
 
+import java.time.LocalDate;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,11 @@ public class FilmManagerImpl implements FilmManager {
 	@Override
 	public Iterable<Film> findAll() {
 		return filmDao.findAll();
+	}
+
+	@Override
+	public Iterable<Film> findByDateSortieAfter(LocalDate dateSortieSemaine) {
+		return filmDao.findByDateSortieAfter(dateSortieSemaine);
 	}
 
 }

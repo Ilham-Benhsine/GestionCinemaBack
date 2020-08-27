@@ -18,4 +18,5 @@ public class Nationalite {
 	private int id;
 	private String valeur;
 
+
 }

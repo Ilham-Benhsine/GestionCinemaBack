@@ -25,6 +25,8 @@ public class Seance {
 	@ManyToOne
 	private Film film;
 	private LocalDateTime horaire;
+	
+
 	private boolean sup3D;
 	private int placesSansReservation;
 	@ManyToMany(cascade = CascadeType.ALL)

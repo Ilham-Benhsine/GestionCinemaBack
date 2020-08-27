@@ -25,6 +25,10 @@ public class Film {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	public int getId() {
+		return id;
+	}
+	
 	private String titre;
 	private LocalTime duree;
 	@Column(length = 1500)
