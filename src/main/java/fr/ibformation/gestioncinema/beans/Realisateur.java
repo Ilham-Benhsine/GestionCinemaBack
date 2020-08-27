@@ -17,6 +17,10 @@ public class Realisateur {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String prenom;
+	public int getId() {
+		return id;
+	}
+
 	private String nom;
 
 }

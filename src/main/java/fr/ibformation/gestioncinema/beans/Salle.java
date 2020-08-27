@@ -23,6 +23,10 @@ public class Salle {
 	private int id;
 	private int numero;
 	private int capacite;
+	public int getId() {
+		return id;
+	}
+
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_salle")
 	private List<Seance> seances;

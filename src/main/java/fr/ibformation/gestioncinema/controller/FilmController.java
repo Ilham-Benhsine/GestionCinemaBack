@@ -1,5 +1,8 @@
 package fr.ibformation.gestioncinema.controller;
 
+import java.time.LocalDate;
+import java.time.Month;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,6 +24,15 @@ public class FilmController {
 	@RequestMapping(method = RequestMethod.GET, path = ("/"))
 	public Iterable<Film> getFilm() {
 		return filmManager.findAll();
+		
+		
+		//return filmManager.findAll();
+	}
+	@CrossOrigin
+	@RequestMapping(method = RequestMethod.GET, path = ("/alaffiche"))
+	public Iterable<Film> getFilmALAffiche(){
+		System.out.println("getFilmALAffiche");
+		return filmManager.findByDateSortieAfter(LocalDate.of(2020, Month.AUGUST, 15));
 	}
 
 	@CrossOrigin
@@ -29,5 +41,7 @@ public class FilmController {
 		System.out.println(film);
 		return filmManager.save(film);
 	}
-
 }
+
+
+

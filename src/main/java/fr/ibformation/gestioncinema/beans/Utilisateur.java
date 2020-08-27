@@ -22,6 +22,10 @@ public class Utilisateur {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String pseudo;
+	public int getId() {
+		return id;
+	}
+	
 	private String password;
 	private String prenom;
 	private String nom;

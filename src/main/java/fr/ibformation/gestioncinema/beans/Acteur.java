@@ -18,5 +18,9 @@ public class Acteur {
 	private int id;
 	private String prenom;
 	private String nom;
+	public int getId() {
+		return id;
+	}
+
 
 }
